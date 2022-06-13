@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       myName: 'Alex',
-      age: 40,
+      myAge: 40,
       imageUrl: 'https://ru.vuejs.org/images/logo.png'
     }
   },
@@ -11,16 +11,10 @@ const app = Vue.createApp({
       return this.myName;
     },
     getAge() {
-      return this.age;
-    },
-    outputName() {
-      return 'My name is ' + this.getName();
-    } ,
-    outputAge() {
-      return 'I\'m  ' + this.getAge() + ' years old';
+      return this.myAge;
     },
     outputAgePlus5Years() {
-      return 'In 5 years I\'ll be ' + (this.getAge() + 5) + ' years old';
+      return this.getAge() + 5;
     },
     outputFavouriteNumber() {
       return 'Favorite Number: ' + Math.random();
